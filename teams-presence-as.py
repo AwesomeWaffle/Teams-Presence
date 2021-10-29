@@ -1,6 +1,6 @@
 ##!/usr/bin/env python
 # Python script to show Teams presence status on led
-# Author: Austin Stoffel
+# Author: Maximilian Krause
 # Date 10.29.2021
 
 # Define Error Logging
@@ -141,7 +141,7 @@ if args.brightness:
         printwarning("Option: Brightness set to " + str(brightness))
 
 if args.weekend:
-	printwarning("Option: Set weekend checks to true")
+        printwarning("Option: Set weekend checks to true")
 
 if args.afterwork:
         printwarning("Option: Set after work to true")
@@ -440,14 +440,14 @@ def printHeader():
 # Check for Weekend
 def check_weekend():
         # Stop random blinking
-	blinkThread.do_run = False
-	blinkThread.join()
+        blinkThread.do_run = False
+        blinkThread.join()
 
-	now = datetime.now()
-
-	# Check for weekend option
-	if args.weekend:
-		return
+        now = datetime.now()
+        
+        # Check for weekend option
+        if args.weekend:
+                return
 
         while now.strftime("%A") not in workdays:
                 printHeader()
@@ -616,8 +616,8 @@ if __name__ == '__main__':
                 if args.afterwork:
                         printwarning("Option:\t\t\t" + "Set display after work to True")
 
-		if args.weekend:
-			printwarning("Option:\t\t\t" + "Set weekend checks to True")
+                if args.weekend:
+                        printwarning("Option:\t\t\t" + "Set weekend checks to True")
 
                 print("User:\t\t\t" + fullname)
 
