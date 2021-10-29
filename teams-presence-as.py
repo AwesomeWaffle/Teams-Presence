@@ -443,7 +443,7 @@ def check_weekend():
 	blinkThread.do_run = False
 	blinkThread.join()
 
-        now = datetime.now()
+	now = datetime.now()
 
 	# Check for weekend option
 	if args.weekend:
